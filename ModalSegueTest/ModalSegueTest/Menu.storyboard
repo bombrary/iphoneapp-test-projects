@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Xg-s1-7PL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="y1v-Za-qSK">
+            <objects>
+                <viewController id="1Xg-s1-7PL" customClass="MenuViewController" customModule="ModalSegueTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="Ptf-Ze-TAP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUT-Ot-IOh">
+                                <rect key="frame" x="0.0" y="662" width="414" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="DWt-Pg-rof">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7j-OW-SbW">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                <state key="normal" title="To Destination1"/>
+                                                <connections>
+                                                    <action selector="dstOneTapped:" destination="1Xg-s1-7PL" eventType="touchUpInside" id="JLH-YA-7jS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqG-E7-gg3">
+                                                <rect key="frame" x="0.0" y="100" width="414" height="100"/>
+                                                <state key="normal" title="To Destination2"/>
+                                                <connections>
+                                                    <action selector="dstTwoTapped:" destination="1Xg-s1-7PL" eventType="touchUpInside" id="PB5-ix-eCN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="DWt-Pg-rof" firstAttribute="leading" secondItem="OUT-Ot-IOh" secondAttribute="leading" id="0U7-aD-c8Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="DWt-Pg-rof" secondAttribute="bottom" id="JpD-Gf-QXy"/>
+                                    <constraint firstAttribute="height" constant="200" id="YIQ-72-Ok8"/>
+                                    <constraint firstAttribute="trailing" secondItem="DWt-Pg-rof" secondAttribute="trailing" id="f6F-FI-jqq"/>
+                                    <constraint firstItem="DWt-Pg-rof" firstAttribute="top" secondItem="OUT-Ot-IOh" secondAttribute="top" id="o0T-TZ-G8M"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5bI-Mf-5qD" firstAttribute="bottom" secondItem="OUT-Ot-IOh" secondAttribute="bottom" id="c6j-bT-cAw"/>
+                            <constraint firstItem="5bI-Mf-5qD" firstAttribute="trailing" secondItem="OUT-Ot-IOh" secondAttribute="trailing" id="duP-jy-JZx"/>
+                            <constraint firstItem="OUT-Ot-IOh" firstAttribute="leading" secondItem="5bI-Mf-5qD" secondAttribute="leading" id="mNn-K3-GOt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5bI-Mf-5qD"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuView" destination="OUT-Ot-IOh" id="6KT-oD-38C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RK0-fj-zbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="73"/>
+        </scene>
+    </scenes>
+</document>
