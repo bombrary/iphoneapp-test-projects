@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBAction func buttonTapped(_ sender: Any) {
         let stb = UIStoryboard(name: "Walkthrough", bundle :nil)
         let pageVC = stb.instantiateViewController(withIdentifier: "walk")
-        pageVC.modalPresentationStyle = .automatic
+        pageVC.modalPresentationStyle = .currentContext
         present(pageVC, animated: true, completion: nil)
     }
     
